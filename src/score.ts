@@ -70,7 +70,8 @@ export const scorePullRequest = async (
     return
   }
 
-  const tag = '<!-- This is an auto-generated comment: scoring by chatgpt -->'
-  const commenter = new Commenter()
-  await commenter.comment(`:robot: ChatGPT score: ${response}`, tag, 'replace')
+  const tag = '<!-- This is an auto-generated comment: scoring by chatgpt -->';
+  const commenter = new Commenter();
+  await commenter.comment(`:robot: ChatGPT score: ${response}`, tag, 'replace');
+  return response;
 }
