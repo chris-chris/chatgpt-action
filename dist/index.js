@@ -29153,8 +29153,7 @@ const scorePullRequest = async (bot, options, prompts) => {
         _actions_core__WEBPACK_IMPORTED_MODULE_2__.warning(`Skipped: diff.data.files is null`);
         return;
     }
-    await bot.chat('score', prompts.render_scoring_beginning(inputs), true);
-    let response = await bot.chat('score', prompts.render_scoring(inputs));
+    let response = await bot.chat('score', prompts.render_scoring_beginning(inputs), true);
     if (!response) {
         _actions_core__WEBPACK_IMPORTED_MODULE_2__.info('score: nothing obtained from chatgpt');
         return;
@@ -29162,6 +29161,7 @@ const scorePullRequest = async (bot, options, prompts) => {
     const tag = '<!-- This is an auto-generated comment: scoring by chatgpt -->';
     const commenter = new _commenter_js__WEBPACK_IMPORTED_MODULE_0__/* .Commenter */ .E();
     await commenter.comment(`:robot: ChatGPT score: ${response}`, tag, 'replace');
+    return response;
 };
 
 
