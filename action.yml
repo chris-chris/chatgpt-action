@@ -74,16 +74,7 @@ inputs:
       and 85 means the the pull request is basically acceptable. You just need to reply a
       number between 0 and 100, e.g., "85", and a comment within 30 words. Next, I would
       give you the whole diff of the pull request. Reply "OK" to confirm.
-  scoring:
-    type: string
-    required: false
-    description: 'The prompt for the whole diff for scoring'
-    default: |
-      The diff is as follows:
 
-      ```diff
-      $diff
-      ```
 runs:
   using: 'node16'
   main: 'dist/index.js'

@@ -198,7 +198,6 @@ See also: [./action.yml](./action.yml)
 - `review_beginning`: The beginning prompt of a code review dialog
 - `review_patch`: The prompt for each chunks/patches
 - `scoring_beginning`: The beginning prompt for scoring a pull request
-- `scoring`: The prompt for the whole pull request
 
 #### Variables available in prompt templates
 

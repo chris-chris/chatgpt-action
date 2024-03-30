@@ -28813,12 +28813,10 @@ class Prompts {
     review_beginning;
     review_patch;
     scoring_beginning;
-    scoring;
     constructor(review_beginning = '', review_patch = '', scoring_beginning = '', scoring = '') {
         this.review_beginning = review_beginning;
         this.review_patch = review_patch;
         this.scoring_beginning = scoring_beginning;
-        this.scoring = scoring;
     }
     render_review_beginning(inputs) {
         return inputs.render(this.review_beginning);
@@ -28828,9 +28826,6 @@ class Prompts {
     }
     render_scoring_beginning(inputs) {
         return inputs.render(this.scoring_beginning);
-    }
-    render_scoring(inputs) {
-        return inputs.render(this.scoring);
     }
 }
 class Inputs {

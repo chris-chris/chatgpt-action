@@ -5,18 +5,15 @@ export class Prompts {
   public review_beginning: string
   public review_patch: string
   public scoring_beginning: string
-  public scoring: string
 
   constructor(
     review_beginning: string = '',
     review_patch: string = '',
-    scoring_beginning: string = '',
-    scoring: string = ''
+    scoring_beginning: string = ''
   ) {
     this.review_beginning = review_beginning
     this.review_patch = review_patch
     this.scoring_beginning = scoring_beginning
-    this.scoring = scoring
   }
 
   public render_review_beginning(inputs: Inputs): string {
@@ -31,9 +28,6 @@ export class Prompts {
     return inputs.render(this.scoring_beginning)
   }
 
-  public render_scoring(inputs: Inputs): string {
-    return inputs.render(this.scoring)
-  }
 }
 
 export class Inputs {

@@ -15,8 +15,7 @@ async function run(): Promise<void> {
   const prompts: Prompts = new Prompts(
     core.getInput('review_beginning'),
     core.getInput('review_patch'),
-    core.getInput('scoring_beginning'),
-    core.getInput('scoring')
+    core.getInput('scoring_beginning')
   )
 
   // initialize chatgpt bot
