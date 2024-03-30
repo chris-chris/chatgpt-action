@@ -34,7 +34,7 @@ async function run(): Promise<void> {
     core.info(`running Github action: ${action}`)
     if (action === 'score') {
       const score = await scorePullRequest(bot, options, prompts);
-      core.output(score);
+      core.setOutput('score', score);
     } else if (action === 'review') {
       await codeReview(bot, options, prompts)
     } else {
